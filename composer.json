@@ -29,5 +29,5 @@
     },
 
     "minimum-stability": "dev",
-    "target-dir": "QUI"
+    "target-dir": "src/"
 }
