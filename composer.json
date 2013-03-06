@@ -27,5 +27,6 @@
         "class": "QUI\\Composer\\QUIInstaller"
     },
 
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "target-dir": "QUI"
 }
