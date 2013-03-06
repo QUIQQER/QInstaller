@@ -20,7 +20,7 @@
 
     "autoload": {
         "psr-0": {
-            "QUI\\Composer": "src/"
+            "QUI\\Composer": ""
         }
     },
 
@@ -29,5 +29,5 @@
     },
 
     "minimum-stability": "dev",
-    "target-dir": "src/"
+    "target-dir": "QUI/"
 }
