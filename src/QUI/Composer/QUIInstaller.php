@@ -4,7 +4,7 @@
  * This file contains the \QUI\Installer class
  */
 
-namespace \QUI\Composer;
+namespace QUI\Composer;
 
 use Composer\Repository\InstalledRepositoryInterface;
 use Composer\Package\PackageInterface;
