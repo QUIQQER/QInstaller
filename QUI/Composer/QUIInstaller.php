@@ -4,7 +4,7 @@
  * This file contains the \QUI\Installer class
  */
 
-namespace QUI\Composer;
+namespace \QUI\Composer;
 
 use Composer\Repository\InstalledRepositoryInterface;
 use Composer\Package\PackageInterface;
@@ -19,7 +19,7 @@ file_put_contents('/var/www/tests/quiqqer/test', 'huhu');
  * @package com.pcsg.qui
  */
 
-class QuiInstaller extends LibraryInstaller
+class QUIInstaller extends LibraryInstaller
 {
     /**
      * {@inheritDoc}
