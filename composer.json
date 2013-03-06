@@ -23,9 +23,11 @@
         }
     },
 
-    "target-dir": "src/"
+    "target-dir": "src/",
 
     "extra": {
         "class": "QUI\\Composer\\QUIInstaller"
-    }
+    },
+
+    "minimum-stability": "dev"
 }
