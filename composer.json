@@ -19,12 +19,12 @@
 
     "autoload": {
         "psr-0": {
-            "\\QUI\\Composer": "src/"
+            "QUI\\Composer": "src/"
         }
     },
 
     "extra": {
-        "class": "\\QUI\\Composer\\QUIInstaller"
+        "class": "QUI\\Composer\\QUIInstaller"
     },
 
     "minimum-stability": "dev"
