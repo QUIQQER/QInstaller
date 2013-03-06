@@ -27,7 +27,5 @@
 
     "extra": {
         "class": "QUI\\Composer\\QUIInstaller"
-    },
-
-    "minimum-stability": "dev"
+    }
 }
