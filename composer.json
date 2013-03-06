@@ -1,6 +1,7 @@
 {
 	"name" : "quiqqer/installer",
 	"description" : "Installer for QUIQQER",
+	"version" : "dev-master",
 
 	"type": "composer-installer",
 	"license" : "GPL-3.0+",
@@ -22,8 +23,6 @@
             "QUI\\Composer": "src/"
         }
     },
-
-    "target-dir": "src/QUI/",
 
     "extra": {
         "class": "QUI\\Composer\\QUIInstaller"
