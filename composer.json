@@ -23,7 +23,7 @@
         }
     },
 
-    "target-dir": "src/",
+    "target-dir": "src/QUI/",
 
     "extra": {
         "class": "QUI\\Composer\\QUIInstaller"
