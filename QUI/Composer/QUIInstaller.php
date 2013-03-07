@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file contains the \QUI\Composer\Installer class
+ * This file contains the \QUI\Composer\QUIInstaller class
  */
 
 namespace QUI\Composer;
@@ -11,7 +11,7 @@ use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 
 /**
- * QUIQQER Installation
+ * QUIQQER Installer
  *
  * @author www.pcsg.de (Henning Leutz)
  * @package com.pcsg.qui
