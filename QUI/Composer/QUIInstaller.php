@@ -1,12 +1,10 @@
 <?php
 
 /**
- * This file contains the \QUI\Installer class
+ * This file contains the \QUI\Composer\Installer class
  */
 
 namespace QUI\Composer;
-
-use class2\Date;
 
 use Composer\Repository\InstalledRepositoryInterface;
 use Composer\Package\PackageInterface;
