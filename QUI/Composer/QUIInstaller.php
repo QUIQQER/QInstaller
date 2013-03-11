@@ -15,6 +15,9 @@ use Composer\Installer\LibraryInstaller;
  *
  * @author www.pcsg.de (Henning Leutz)
  * @package com.pcsg.qui
+ *
+ * @todo htaccess
+ * @todo robots.txt
  */
 
 class QUIInstaller extends LibraryInstaller
@@ -113,7 +116,9 @@ class QUIInstaller extends LibraryInstaller
         $var_dir = rtrim( $ini['globals']['var_dir'], '/') .'/';
 
         $admin_dir = $cms_dir .'admin/';
-        $temp_dir  = $cms_dir .'backup_'. date('Y_m_d__H_i_s') .'/';
+
+        $temp_name = 'backup_'. date('Y_m_d__H_i_s');
+        $temp_dir  = $cms_dir . $temp_name .'/';
 
         $update_files = array(
             'ajax.php', 'api.php', 'cron.php',
@@ -152,6 +157,10 @@ class QUIInstaller extends LibraryInstaller
         foreach ( $update_files as $file ) {
             rename( $package_dir . $file , $cms_dir . $file );
         }
+
+
+        // move the backup to temp
+        rename( $temp_dir, $var_dir .'temp/'. $temp_name );
     }
 }
 
