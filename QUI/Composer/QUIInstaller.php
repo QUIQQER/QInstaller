@@ -122,8 +122,7 @@ class QUIInstaller extends LibraryInstaller
 
         $update_files = array(
             'ajax.php', 'api.php', 'cron.php',
-            'footer.php', 'header.php', 'image.php', 'index.php',
-            'mail_protection.php'
+            'footer.php', 'header.php', 'image.php', 'index.php'
         );
 
         mkdir( $temp_dir );
