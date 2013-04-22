@@ -121,8 +121,7 @@ class QUIInstaller extends LibraryInstaller
         $temp_dir  = $cms_dir . $temp_name .'/';
 
         $update_files = array(
-            'ajax.php', 'cron.php', 'footer.php',
-            'header.php', 'image.php', 'index.php'
+            'ajax.php', 'bootstrap.php', 'quiqqer.php', 'image.php', 'index.php'
         );
 
         mkdir( $temp_dir );
