@@ -22,7 +22,7 @@ use Composer\Installer\LibraryInstaller;
 
 class QUIInstaller extends LibraryInstaller
 {
-	/**
+    /**
      * {@inheritDoc}
      */
     public function supports($packageType)
@@ -46,9 +46,9 @@ class QUIInstaller extends LibraryInstaller
         $installed_path = $this->getInstallPath( $package );
 
         $dir     = getcwd() .'/'; // not the best solution :-/
-	    $etc_dir = $dir .'etc/';
+        $etc_dir = $dir .'etc/';
 
-	    if ( !file_exists( $etc_dir .'conf.ini' ) ) {
+        if ( !file_exists( $etc_dir .'conf.ini' ) ) {
             return false;
         }
 
@@ -69,9 +69,9 @@ class QUIInstaller extends LibraryInstaller
      * Install QUIQQER
      * @see Composer\Installer.LibraryInstaller::install()
      */
-	public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
-	{
-	    // composer installation
+    public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
+    {
+        // composer installation
         parent::install( $repo, $package );
 
         $this->_quiqqer_update( $repo, $package );
@@ -97,8 +97,8 @@ class QUIInstaller extends LibraryInstaller
     protected function _quiqqer_update(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
         $dir      = getcwd() .'/'; // not the best solution :-/
-	    $etc_dir  = $dir .'etc/';
-	    $Composer = $this->composer; /* @var $Composer Composer */
+        $etc_dir  = $dir .'etc/';
+        $Composer = $this->composer; /* @var $Composer Composer */
 
         if ( !file_exists( $etc_dir .'conf.ini' ) )
         {
@@ -121,8 +121,8 @@ class QUIInstaller extends LibraryInstaller
         $temp_dir  = $cms_dir . $temp_name .'/';
 
         $update_files = array(
-            'ajax.php', 'api.php', 'cron.php',
-            'footer.php', 'header.php', 'image.php', 'index.php'
+            'ajax.php', 'cron.php', 'footer.php',
+            'header.php', 'image.php', 'index.php'
         );
 
         mkdir( $temp_dir );
@@ -132,11 +132,11 @@ class QUIInstaller extends LibraryInstaller
             rename( $bin_dir, $temp_dir .'bin' );
         }
 
-	    if ( is_dir( $lib_dir ) ) {
+        if ( is_dir( $lib_dir ) ) {
             rename( $lib_dir, $temp_dir .'lib' );
         }
 
-	    if ( is_dir( $admin_dir ) ) {
+        if ( is_dir( $admin_dir ) ) {
             rename( $admin_dir, $temp_dir .'admin' );
         }
 
@@ -153,8 +153,15 @@ class QUIInstaller extends LibraryInstaller
         rename( $package_dir .'bin' , $bin_dir );
         rename( $package_dir .'admin' , $admin_dir );
 
-        foreach ( $update_files as $file ) {
-            rename( $package_dir . $file , $cms_dir . $file );
+        foreach ( $update_files as $file )
+        {
+            if ( file_exists( $package_dir . $file ) )
+            {
+                rename(
+                    $package_dir . $file,
+                    $cms_dir . $file
+                );
+            }
         }
 
 
