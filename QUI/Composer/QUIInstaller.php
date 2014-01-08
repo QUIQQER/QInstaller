@@ -45,7 +45,7 @@ class QUIInstaller extends LibraryInstaller
 
         $installed_path = $this->getInstallPath( $package );
 
-        $dir     = getcwd() .'/'; // not the best solution :-/
+        $dir     = getcwd() .'/../../'; // not the best solution :-/
         $etc_dir = $dir .'etc/';
 
         if ( !file_exists( $etc_dir .'conf.ini' ) ) {
@@ -96,7 +96,14 @@ class QUIInstaller extends LibraryInstaller
      */
     protected function _quiqqer_update(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
-        $dir      = getcwd() .'/'; // not the best solution :-/
+        if ( defined( 'CMS_DIR' ) )
+        {
+            $dir = CMS_DIR;
+        } else
+        {
+            $dir = getcwd() .'/../../'; // not the best solution :-/
+        }
+
         $etc_dir  = $dir .'etc/';
         $Composer = $this->composer; /* @var $Composer Composer */
 
