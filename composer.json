@@ -1,7 +1,7 @@
 {
     "name" : "quiqqer/installer",
     "description" : "Installer for QUIQQER",
-    "version" : "dev-dev",
+    "version" : "dev-master",
 
     "type": "composer-installer",
     "license" : "GPL-3.0+",
