@@ -1,12 +1,12 @@
 {
-	"name" : "quiqqer/installer",
-	"description" : "Installer for QUIQQER",
-	"version" : "dev-master",
+    "name" : "quiqqer/installer",
+    "description" : "Installer for QUIQQER",
+    "version" : "dev-dev",
 
-	"type": "composer-installer",
-	"license" : "GPL-3.0+",
+    "type": "composer-installer",
+    "license" : "GPL-3.0+",
 
-	"authors" : [{
+    "authors" : [{
         "name": "Henning Leutz",
         "email": "leutz@pcsg.de",
         "homepage": "http://www.pcsg.de",
