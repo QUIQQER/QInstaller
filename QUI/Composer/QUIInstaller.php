@@ -96,9 +96,10 @@ class QUIInstaller extends LibraryInstaller
      */
     protected function _quiqqer_update(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
-        if ( defined( 'CMS_DIR' ) )
+        if ( defined( 'CMS_DIR' ) && file_exists( CMS_DIR .'etc/conf.ini' ) )
         {
             $dir = CMS_DIR;
+
         } else
         {
             $dir = getcwd() .'/../../'; // not the best solution :-/
