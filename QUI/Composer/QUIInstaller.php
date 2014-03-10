@@ -175,10 +175,11 @@ class QUIInstaller extends LibraryInstaller
             }
         }
 
+        require_once $cms_dir .'bootstrap.php';
 
         // move the backup to temp
-        rename( $temp_dir, $var_dir .'temp/'. $temp_name );
+        \QUI::getTemp()->moveToTemp( $temp_dir );
+
+        // rename( $temp_dir,   $var_dir .'temp/'. $temp_name );
     }
 }
-
-?>
