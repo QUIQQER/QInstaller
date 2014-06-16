@@ -48,11 +48,11 @@ class QUIInstaller extends LibraryInstaller
         $dir     = getcwd() .'/../../'; // not the best solution :-/
         $etc_dir = $dir .'etc/';
 
-        if ( !file_exists( $etc_dir .'conf.ini' ) ) {
+        if ( !file_exists( $etc_dir .'conf.ini.php' ) ) {
             return false;
         }
 
-        $ini     = parse_ini_file( $etc_dir .'conf.ini', true );
+        $ini     = parse_ini_file( $etc_dir .'conf.ini.php', true );
         $cms_dir = rtrim( $ini['globals']['cms_dir'], '/') .'/';
 
         // quiqqer is installed
@@ -96,11 +96,11 @@ class QUIInstaller extends LibraryInstaller
      */
     protected function _quiqqer_update(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
-        if ( getcwd() && file_exists( getcwd() .'/etc/conf.ini' ) )
+        if ( getcwd() && file_exists( getcwd() .'/etc/conf.ini.php' ) )
         {
             $dir = getcwd() .'/';
 
-        } else if ( defined( 'CMS_DIR' ) && file_exists( CMS_DIR .'etc/conf.ini' ) )
+        } else if ( defined( 'CMS_DIR' ) && file_exists( CMS_DIR .'etc/conf.ini.php' ) )
         {
             $dir = CMS_DIR;
 
@@ -112,7 +112,7 @@ class QUIInstaller extends LibraryInstaller
         $etc_dir  = $dir .'etc/';
         $Composer = $this->composer; /* @var $Composer Composer */
 
-        if ( !file_exists( $etc_dir .'conf.ini' ) )
+        if ( !file_exists( $etc_dir .'conf.ini.php' ) )
         {
             throw new \RuntimeException(
                 'Could not find the QUIQQER configuration'
@@ -120,7 +120,7 @@ class QUIInstaller extends LibraryInstaller
         }
 
         // quiqqers own installation, move the dirs to its place
-        $ini = parse_ini_file( $etc_dir .'conf.ini', true );
+        $ini = parse_ini_file( $etc_dir .'conf.ini.php', true );
 
         $cms_dir = rtrim( $ini['globals']['cms_dir'], '/') .'/';
         $bin_dir = rtrim( $ini['globals']['bin_dir'], '/') .'/';
