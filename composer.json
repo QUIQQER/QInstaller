@@ -1,33 +1,28 @@
 {
-    "name" : "quiqqer/installer",
-    "description" : "Installer for QUIQQER",
-    "version" : "dev-dev",
-
+    "name": "quiqqer\/installer",
+    "description": "Installer for QUIQQER",
     "type": "composer-installer",
-    "license" : "GPL-3.0+",
-
-    "authors" : [{
-        "name": "Henning Leutz",
-        "email": "leutz@pcsg.de",
-        "homepage": "http://www.pcsg.de",
-        "role": "Developer"
-    }],
-
-    "support" : {
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Henning Leutz",
+            "email": "leutz@pcsg.de",
+            "homepage": "http:\/\/www.pcsg.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
         "email": "support@pcsg.de",
-        "url": "http://www.quiqqer.com"
+        "url": "http:\/\/www.quiqqer.com"
     },
-
     "autoload": {
         "psr-0": {
             "QUI\\Composer": ""
         }
     },
-
     "extra": {
         "class": "QUI\\Composer\\QUIInstaller"
     },
-
     "minimum-stability": "dev",
-    "target-dir": "QUI/"
+    "target-dir": "QUI\/"
 }
